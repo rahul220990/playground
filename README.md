@@ -175,7 +175,7 @@ and `delete` (for removing documents), but we will need to specify additional me
 
 Luckily, we do not need to manually implement these queries, we can simply use Spring Boot’s repository naming conventions, and the MongoRepository will intelligently construct the queries at runtime. This means that our interface will be extremely simple, as follows:
 ```
-import com.kominfo.halaqohit.springbootdatajpamongodb.entity.Pets;
+import Pets;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
@@ -206,8 +206,8 @@ The basic file structure will look as follows:
 ```
 package com.kominfo.halaqohit.springbootdatajpamongodb.controller;
 
-import com.kominfo.halaqohit.springbootdatajpamongodb.entity.Pets;
-import com.kominfo.halaqohit.springbootdatajpamongodb.repository.PetsRepository;
+import Pets;
+import PetsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -316,8 +316,8 @@ This endpoint takes the `id` of a document in the `pets` collection and removes 
 ```
 package com.kominfo.halaqohit.springbootdatajpamongodb.controller;
 
-import com.kominfo.halaqohit.springbootdatajpamongodb.entity.Pets;
-import com.kominfo.halaqohit.springbootdatajpamongodb.repository.PetsRepository;
+import Pets;
+import PetsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -482,4 +482,4 @@ Returns:
 Future Articles
 
 Now you have created a REST API using Java Spring Boot and MongoDB! In future articles, I will explain how to add additional features to your API,
-such as authentication! I will list the articles here as they become available.
+such as authentication! I will list the articles here as they become available.# playground
